@@ -7,46 +7,59 @@ abstract class Persona {
 	private String nome;
 	private String congnome;
 	private LocalDate dataNascita;
-	private String cittaNascita;
-	private String sesso;
-	public Persona(String nome, String congnome, LocalDate dataNascita, String cittaNascita, String sesso) {
+	private String luogoNascita;
+	private Sesso sesso;
+	private String nazionalita;
+	
+	public Persona(String nome, String congnome, LocalDate dataNascita, String luogoNascita, Sesso sesso,
+			String nazionalita) {
 		super();
 		this.nome = nome;
 		this.congnome = congnome;
 		this.dataNascita = dataNascita;
-		this.cittaNascita = cittaNascita;
+		this.luogoNascita = luogoNascita;
 		this.sesso = sesso;
+		this.nazionalita = nazionalita;
 	}
 	public String getNome() {
 		return nome;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 	public String getCongnome() {
 		return congnome;
-	}
-	public void setCongnome(String congnome) {
-		this.congnome = congnome;
 	}
 	public LocalDate getDataNascita() {
 		return dataNascita;
 	}
+	public String getLuogoNascita() {
+		return luogoNascita;
+	}
+
+	public String getNazionalita() {
+		return nazionalita;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setCongnome(String congnome) {
+		this.congnome = congnome;
+	}
 	public void setDataNascita(LocalDate dataNascita) {
 		this.dataNascita = dataNascita;
 	}
-	public String getCittaNascita() {
-		return cittaNascita;
+	public void setLuogoNascita(String luogoNascita) {
+		this.luogoNascita = luogoNascita;
 	}
-	public void setCittaNascita(String cittaNascita) {
-		this.cittaNascita = cittaNascita;
+
+	public void setNazionalita(String nazionalita) {
+		this.nazionalita= nazionalita;
 	}
-	public String getSesso() {
+	public Sesso getSesso() {
 		return sesso;
 	}
-	public void setSesso(String sesso) {
+	public void setSesso(Sesso sesso) {
 		this.sesso = sesso;
 	}
+	
 
 	
 
